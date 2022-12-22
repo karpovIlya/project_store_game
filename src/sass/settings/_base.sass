@@ -1,0 +1,21 @@
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+
+html
+    font-size: 62.5%
+
+body
+    font-family: "Montserrat"
+
+.grid-container
+    display: grid
+    grid-template-rows: 100vh min-content 70vh repeat(3, min-content)
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]
+    & > *
+        background: red
+        border: 1px solid black
+        color: white
+        font-size: 2rem
+        padding: 2rem
