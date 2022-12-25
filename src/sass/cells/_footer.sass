@@ -1,2 +1,22 @@
 .footer
     grid-column: full-start / full-end
+    background: $color-blue-dark
+    border-top: 3px solid $color-white
+    padding: 8rem 0
+    &__logo
+        display: block
+        width: 12rem
+        height: 4rem
+        margin: 0 auto
+        margin-bottom: 8rem
+    &__list
+        display: flex
+        justify-content: center
+    &__element:not(:last-child)
+        margin-right: 3.5rem
+    &__link
+        @include text($color-white) 
+        text-decoration: none
+        transition: .1s all
+        &:hover
+            color: $color-grey

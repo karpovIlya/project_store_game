@@ -1,2 +1,36 @@
 .promo
-    grid-column: full-start / col-end 5
+    grid-column: full-start / col-end 6
+    background: url(../img/promo-bg.png) center / cover no-repeat
+    display: grid
+    grid-template-rows: 1fr min-content minmax(min-content, 10rem) 1fr  
+    padding: 5rem
+    &__logo
+        width: 12rem
+        height: 4rem
+        justify-self: center
+    &__subtitle
+        @include subtitle
+    &__title
+        @include first-title
+    &__btn
+        align-self: start
+        justify-self: start
+    &__separator-text
+        @include text($color-grey)
+        display: grid
+        grid-template-columns: 1fr max-content 1fr
+        grid-gap: 2rem
+        align-items: center
+        margin-bottom: 1.5rem
+        &::before, &::after
+            content: ""
+            display: block
+            width: 100%
+            height: .1rem
+            background: $color-grey
+    &__icon-wrapp
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        justify-items: center
+    &__icon
+        height: 2.5rem

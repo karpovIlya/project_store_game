@@ -1,0 +1,13 @@
+.benefit-card
+    display: grid
+    grid-template-columns: min-content 1fr
+    grid-gap: 1.5rem 2.5rem
+    &__icon
+        grid-row: 1 / span 2
+        transform: translateY(-1rem)
+        width: 4.5rem
+        height: 4.5rem
+    &__title
+        @include third-title($color-green-dark)
+    &__text
+        @include text($color-green-dark)

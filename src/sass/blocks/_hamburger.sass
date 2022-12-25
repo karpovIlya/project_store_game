@@ -1,0 +1,32 @@
+.hamburger
+    cursor: pointer
+    position: fixed
+    width: 5rem
+    height: 2rem
+    top: 2.5rem
+    left: 1.5rem
+    span
+        display: block
+        width: 5rem
+        height: .1rem
+        background: $color-white
+        transition: .5s all
+        &:not(:last-child)
+            margin-bottom: 1rem
+    &_active
+        span
+            &:nth-child(1)
+                position: absolute
+                top: 0rem
+                left: 0
+                transform: rotate(45deg)
+            &:nth-child(2)
+                display: none
+            &:nth-child(3)
+                position: absolute
+                top: 0
+                left: 0
+                transform: rotate(-45deg)
+                
+                
+                

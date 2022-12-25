@@ -1,2 +1,23 @@
 .top-gamers
-    grid-column: col-end 5 / full-end
+    grid-column: col-end 6 / full-end
+    background: $color-blue-dark
+    display: grid
+    grid-template-columns: min-content max-content
+    align-content: center
+    justify-content: center
+    grid-gap: 4rem 2rem
+    &__title
+        @include third-title($color-green-light)
+        grid-column: 1 / -1
+        justify-self: center
+    &__text
+        align-self: center
+    &__photo
+        width: 7rem
+        height: 7rem
+    &__name
+        @include third-title($color-white)
+    &__score
+        font-size: 1.5rem
+        font-weight: 300
+        color: $color-grey
