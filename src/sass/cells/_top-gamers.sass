@@ -2,10 +2,22 @@
     grid-column: col-end 6 / full-end
     background: $color-blue-dark
     display: grid
-    grid-template-columns: min-content max-content
+    grid-template-columns: max-content
     align-content: center
     justify-content: center
     grid-gap: 4rem 2rem
+    @include adaptive(tablet-big)
+        grid-column: full-start / -1
+        grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr))
+        justify-items: center
+        padding: 8rem 0
+    @include adaptive(tablet-small)
+        grid-template-columns: max-content
+        justify-items: start
+    &__wrapp
+        display: grid
+        grid-template-columns: min-content max-content
+        grid-gap: 0 2rem
     &__title
         @include third-title($color-green-light)
         grid-column: 1 / -1

@@ -1,0 +1,12 @@
+@mixin adaptive($breakpoint)    
+    @if $breakpoint == tablet-big
+        @media (max-width: 1240px)
+            @content
+
+    @if $breakpoint == tablet-small
+        @media (max-width: 687px)
+            @content
+    
+    @if $breakpoint == phone
+        @media (max-width: 500px)
+            @content

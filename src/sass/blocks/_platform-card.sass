@@ -22,6 +22,10 @@
     &__info
         margin-left: 2rem
         display: flex
+        @include adaptive(tablet-small)
+            margin-left: 7rem
+        @include adaptive(phone)
+            margin-left: 3rem
     &__info-icon
         margin-right: 1rem
         width: 2rem

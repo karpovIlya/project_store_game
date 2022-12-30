@@ -4,6 +4,8 @@
     display: grid
     grid-template-rows: 1fr min-content minmax(min-content, 10rem) 1fr  
     padding: 5rem
+    @include adaptive(tablet-big)
+        grid-column: full-start / -1
     &__logo
         width: 12rem
         height: 4rem
@@ -30,7 +32,13 @@
             background: $color-grey
     &__icon-wrapp
         display: grid
-        grid-template-columns: repeat(4, 1fr)
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
+        grid-gap: 2rem 0
         justify-items: center
+        @include adaptive(tablet-big)
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+        @include adaptive(phone)
+            grid-template-columns: min-content
+            justify-content: center
     &__icon
         height: 2.5rem

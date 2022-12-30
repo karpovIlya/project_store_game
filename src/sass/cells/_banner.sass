@@ -5,15 +5,21 @@
         display: grid
         grid-template-columns: repeat(16, 1fr)
         grid-template-rows: repeat(24, 1fr)
+        @include adaptive(tablet-big)
+            grid-column: full-start / -1
         &__image-1
             width: 100%
             grid-column: 4 / 14
             grid-row: 4 / 12
+            @include adaptive(tablet-big)
+                grid-column: 2 / 10
         &__image-2
             width: 100%
             grid-column: 7 / 17
             grid-row: 11 / 19
             transform: translateX(3.5rem)
+            @include adaptive(tablet-big)
+                grid-column: 5 / 13
             
             
     &-content
@@ -24,6 +30,10 @@
         flex-direction: column
         justify-content: center
         align-items: flex-start
+        @include adaptive(tablet-big)
+            padding: 4vw
+            grid-row: 4 / 5
+            grid-column: full-start / -1
         &__subtitle
             @include subtitle
         &__title

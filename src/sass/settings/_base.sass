@@ -5,6 +5,10 @@
 
 html
     font-size: 62.5%
+    @include adaptive(tablet-big)
+        font-size: 50%
+    @include adaptive(phone)
+        font-size: 30%
 
 body
     font-family: "Montserrat"
@@ -13,3 +17,7 @@ body
     display: grid
     grid-template-rows: 100vh min-content 40vw repeat(3, min-content)
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]
+    @include adaptive(tablet-big)
+        grid-template-rows: 100vh min-content min-content min-content 50vw repeat(3, min-content)
+    @include adaptive(phone)
+        grid-template-rows: 80vh min-content min-content min-content 50vw repeat(3, min-content)
